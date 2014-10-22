@@ -1,6 +1,6 @@
 # flat
 
-A simple theme.
+A simple theme based on purecss.
 Preview: [live demo](http://tech.thonatos.com)
 
 ## Installation
@@ -20,6 +20,15 @@ Modify `theme` setting in `_config.yml` to `flat`.
 ``` bash
 cd themes/flat
 git pull
+```
+
+## Build
+
+### scss
+
+```
+    sass --style compressed --watch style.scss:style.min.css
+    sass --style compressed --watch style-old-ie.scss:style-old-ie.min.css
 ```
 ## More
 
