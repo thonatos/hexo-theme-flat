@@ -1,0 +1,12 @@
+# config
+bio: 'Make it easy, make it different, then make it. '
+
+# Content
+excerpt_link: Read More
+
+# Sidebar
+menu:
+  Home: /
+# Archives: /archives
+  Projects: /projects
+  About: /about

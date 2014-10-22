@@ -1,0 +1,21 @@
+<div class="sidebar">
+    <!-- Side Start -->
+    <!-- Siderbar  -->
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="<%- config.url %>" alt="<%- config.title %>"><img class="pure-img" src="<%- config.root %>images/osbloglg.png"/></a></h1>
+            <h2 class="brand-tagline">
+                <small><%- config.subtitle %></small>
+            </h2>
+        </hgroup>
+
+        <div id="sidebar_nav" class="pure-menu pure-menu-open">
+            <ul>
+                <% for (var i in theme.menu){ %>
+                <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <!-- Side End-->
+</div>

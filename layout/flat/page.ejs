@@ -1,0 +1,31 @@
+<% permalink = config.url + config.root + post.path %>
+<div class="content pure-g">
+    <div class=" pure-u-1">
+        <!-- A wrapper for all the blog posts start -->
+
+        <div class="posts">
+            <h1 class="content-subhead"> Page </h1>
+
+            <!-- A single blog post start -->
+
+          <section class="post">
+            <header class="post-header">
+              <h2 class="post-title"><%- post.title %></h2>
+              <%- partial('post/meta') %>
+            </header>
+            <div class="post-banner">
+              <img class="pure-img" src="http://static.hdslb.com/images/header/20140904_banner.jpg" alt="JavaScript 继承机制实现">
+            </div>
+            <div class="post-description">
+              <%- post.content %>
+            </div>
+          </section>
+            <!-- page-nav-start -->
+            <div class="clear" style="height: 25px;">&nbsp;</div>
+            <!-- A single blog post end -->
+        </div>
+
+        <!-- A wrapper for all the blog posts end -->
+        <%- partial('footer')%>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="content pure-g">
+    <div class=" pure-u-1">
+        <!-- A wrapper for all the blog posts start -->
+
+        <div class="posts">
+            <h1 class="content-subhead"> Index </h1>
+
+            <% page.posts.each(function(post) { %>
+            <section class="post">
+                <header class="post-header">
+                    <h2 class="post-title"><a href="<%- config.root %><%- post.path %>"><%- post.title %></a></h2>
+                    <%- partial('post/meta', {post: post}) %>
+                </header>
+                <!--<div class="post-banner">-->
+                    <!--<img class="pure-img" src="<%- config.root%>images/article_bottom_line.png" alt="banner">-->
+                <!--</div>-->
+                <div class="post-description">
+                    <p>
+                        <% if (post.excerpt){ %>
+                        <%- post.excerpt %>
+                        <% } else { %>
+                        <%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>
+                        <% } %>
+                    </p>
+                    <% if (theme.excerpt_link) { %>
+                    <p>
+                        <a href="<%- config.root %><%- post.path %>" class="excerpt-link"><%= theme.excerpt_link %>
+                            ...</a>
+                    </p>
+                    <% } %>
+                </div>
+            </section>
+            <% }); %>
+
+            <!-- page-nav-start -->
+            <div class="clear" style="height: 25px;">&nbsp;</div>
+
+            <div class="pure-u-1">
+                <nav class="pagination" role="pagination">
+                    <% if (page.prev) { %><a class="newer-posts" href="<%- url_for(page.prev_link) %>">← Newer Posts</a><% } %>
+                    <span class="page-number">Page <%- page.current %> of <%- page.total %></span>
+                    <% if (page.next) { %><a class="older-posts" href="<%- url_for(page.next_link) %>">Older Posts →</a><% } %>
+                </nav>
+            </div>
+
+        </div>
+
+        <!-- A wrapper for all the blog posts end -->
+        <%- partial('footer') %>
+    </div>
+</div>
