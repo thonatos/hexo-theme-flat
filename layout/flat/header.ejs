@@ -1,0 +1,13 @@
+<a href="#menu" id="menuLink" class="menu-link">
+    <span></span>
+</a>
+<div class="content-header">
+    <div id="content-header-nav" class="pure-menu pure-menu-open">
+        <ul>
+            <li><a href="<%- config.url %>"><%- config.title %></a></li>
+            <% for (var i in theme.menu){ %>
+            <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+            <% } %>
+        </ul>
+    </div>
+</div>

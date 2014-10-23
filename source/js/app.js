@@ -1,5 +1,10 @@
 $(document).ready(function () {
     init();
+    var flip = 0;
+    $("#menuLink").click(function(event){
+        event.preventDefault();
+        $(".content-header").toggle( flip++ % 2 === 0 );
+    });
 });
 
 $(window).resize(function () {
