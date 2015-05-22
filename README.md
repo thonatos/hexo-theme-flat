@@ -1,6 +1,7 @@
 # flat
 
 A simple theme based on purecss.
+
 Preview: null
 
 ## Installation
