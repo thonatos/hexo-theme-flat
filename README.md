@@ -1,7 +1,7 @@
 # flat
 
 A simple theme based on purecss.
-Preview: [live demo](http://tech.thonatos.com)
+Preview: null
 
 ## Installation
 
